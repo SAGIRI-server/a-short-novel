@@ -1,0 +1,76 @@
+/* little_style */
+
+.bg {
+    background: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wyTs?ver=59ec) no-repeat center center fixed;
+    /* 与下面的blur_box:before中的background设置一样 */
+    width: 100%;
+    height: 100vw;
+}
+
+.blur_box {
+    z-index: 0;
+    /* 为不影响内容显示必须为最高层 */
+    position: relative;
+    overflow: hidden;
+}
+
+.blur_box:before {
+    content: "";
+    /* 必须包括 */
+    position: absolute;
+    ;
+    /* 固定模糊层位置 */
+    width: 300%;
+    height: 300%;
+    left: -100vw;
+    /* 回调模糊层位置 */
+    top: -100%;
+    /* 回调模糊层位置 */
+    background: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wyTs?ver=59ec) no-repeat center center fixed;
+    /* 与上面的bg中的background设置一样 */
+    filter: blur(30px);
+    /* 值越大越模糊 */
+    z-index: -2;
+    /* 模糊层在最下面 */
+}
+
+.rgba {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* 为文字更好显示，将背景颜色加深 */
+    position: absolute;
+    /* 固定半透明色层位置 */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* 中间是rgba半透明色层 */
+    margin: auto;
+}
+
+.content_text {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10vw 10vw;
+    line-height: 50px;
+    width: 90%;
+    margin: auto
+}
+
+article {
+    width: 90%;
+    height: 90%;
+    padding: auto;
+    margin: auto;
+}
+
+.d1 h1 {
+    margin: auto;
+    padding: 10px 30px 50px;
+    color: rgb(188, 188, 188);
+    font-size: 10vw;
+}
+
+.h2 {
+    font-size: 3vw;
+    line-height: normal;
+    text-align: center;
+}
